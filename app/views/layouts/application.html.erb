@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div id="head_bar">
+    <div id="inside_head">
+      <%= link_to image_tag('head.png'), root_path %>
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Welome, <%= current_user.login %>
+          <%= button_tag (link_to "SIGN OUT", destroy_user_session_path, method: :delete), id: 'sign_out_btn' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">Menu<br> fbhsdj</div>
+      <div class="col-md-10"><%= yield %></div>
+    </div>
+  </div>
 
 </body>
 </html>
