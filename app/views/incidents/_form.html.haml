@@ -1,0 +1,21 @@
+-if @incident.errors.any?
+  -@incident.errors.full_messages.each do |error|
+    \- #{ error.to_s}
+    %br
+=simple_form_for @incident, html: { class: 'form-horizontal', multipart: true } do |f|
+  %fieldset
+    %legend
+      =controller.action_name.capitalize
+      incident:
+    .control-group
+      =f.input :date_of_incident
+      =f.input :statute_of_limitations
+      =f.input :liability, label: 'Defendant Liability'
+      =f.input :alcohol, label: 'Alcohol involved?'
+      =f.input :weather_factor, label: 'Weather a factor'
+      =f.input :damage, label: 'Property Damage'
+      =f.input :airbag, label: 'Airbag Deployed'
+      =f.input :speed, label: 'Speed of Bullet Car'
+      =f.input :police_report
+      %br
+      =f.button :submit, class: 'btn btn-primary', value: 'Add incident'

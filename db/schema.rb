@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140818191835) do
     t.string   "status"
     t.string   "creation_date"
     t.string   "date_closed"
-    t.string   "type"
+    t.string   "main_type"
     t.string   "sub_type"
     t.text     "description"
     t.datetime "created_at"

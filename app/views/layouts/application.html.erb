@@ -13,15 +13,22 @@
       <div id="user_nav">
         <% if user_signed_in? %>
           Welome, <%= current_user.login %>
-          <%= button_tag (link_to "SIGN OUT", destroy_user_session_path, method: :delete), id: 'sign_out_btn' %>
+          <%= link_to (button_tag 'SIGN OUT', id: 'sign_out_btn'), destroy_user_session_path, method: :delete  %>
         <% end %>
       </div>
     </div>
   </div>
+  <div id="head_bar_menu">
+    <div id="search">
+      <%= form_tag (cases_path) do text_field_tag('search', nil, placeholder: 'SEARCH') end %>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-2">Menu<br> fbhsdj</div>
-      <div class="col-md-10"><%= yield %></div>
+      <div class="span3">
+        <div id="vertical_menu">Menu<br> fbhsdj</div>
+      </div>
+      <div class="span9"><%= yield %></div>
     </div>
   </div>
 

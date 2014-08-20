@@ -13,7 +13,7 @@ class CreateCases < ActiveRecord::Migration
       t.string :status
       t.string :creation_date
       t.string :date_closed
-      t.string :type
+      t.string :main_type
       t.string :sub_type
       t.text :description
 

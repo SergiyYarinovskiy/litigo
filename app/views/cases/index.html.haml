@@ -1,0 +1,40 @@
+%p
+=link_to (button_tag 'NEW CASE', id: 'new_case_btn'), new_case_path
+%h3 Cases
+%table{id: 'index_case_table'}
+  %thead
+    %tr
+      %td
+        %strong Name
+      %td
+        %strong Number
+      %td
+        %strong Case Type
+      %td
+        %strong Sub-type
+      %td
+        %strong Description
+      %td
+        %strong Medical Bills
+      %td
+        
+  %tbody
+    -@cases.each do |case_var|
+      %tr
+        %td
+          =case_var.name
+        %td
+          =case_var.number
+        %td
+          =case_var.main_type
+        %td
+          =case_var.sub_type
+        %td
+          =case_var.description
+        %td
+          -if case_var.incident.nil?
+            0.0$
+          -else
+            =case_var.incident.damage.concat('$')
+        %td
+          =link_to 'Show', case_path(case_var)

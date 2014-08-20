@@ -1,0 +1,76 @@
+%h3 Case Details
+%br
+%table{id: 'show_case_table'}
+  %tr
+    %td
+      %strong Case name*:
+    %td
+      =@case.name
+  %tr
+    %td
+      %strong Docket no.:
+    %td
+      =@case.doc_number
+  %tr
+    %td
+      %strong Judge:
+    %td
+      =@case.judge
+  %tr
+    %td
+      %strong court:
+    %td
+      =@case.court
+  %tr
+    %td
+      %strong plaintiff:
+    %td
+      =@case.plaintiff
+  %tr
+    %td
+      %strong Defendant:
+    %td
+      =@case.defendant
+  %tr
+    %td
+      %strong corporation:
+    %td
+      -if @case.corporation
+        Yes
+      -else
+        No
+  %tr
+    %td
+      %strong Status:
+    %td
+      =@case.status
+  %tr
+    %td
+      %strong Creation Date:
+    %td
+      =@case.creation_date
+  %tr
+    %td
+      %strong Date Closed:
+    %td
+      =@case.date_closed
+  %tr
+    %td
+      %strong Type*:
+    %td
+      =@case.main_type
+  %tr
+    %td
+      %strong Sub-type:
+    %td
+      =@case.sub_type
+  %tr
+    %td
+      %strong Description:
+    %td
+      =@case.description
+%br
+#links
+  =link_to 'Edit', edit_case_path(@case)
+  |
+  =link_to 'Back', cases_path

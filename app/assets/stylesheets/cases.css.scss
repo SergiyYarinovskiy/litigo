@@ -7,6 +7,11 @@
   height: 40px;
 //  border: 1px solid black;
 }
+#head_bar_menu {
+  width: 100%;
+  background-color: #3fc2d8;
+  height: 40px;
+}
 #inside_head {
   padding-top: 8px;
   padding-left: 20px;
@@ -23,16 +28,91 @@
   background-color: #0483a0;
   border-radius:4px;
   -moz-border-radius:4px;
-}
-#sign_out_btn a{
   color: white;
   text-decoration: none;
+
 }
 .container {
   width: 100%;
 }
-div.col-md-2 {
+div.span3 {
   background-color: #38393a;
   height: 100vh;
   color: #5b5c5c;
+  margin-left: -155px;
+}
+div.span9 {
+  width: 90%;
+}
+#search {
+  float: right;
+  padding-top: 6px;
+  padding-right: 20px;
+  height: 15px;
+}
+#new_case_btn {
+  width: 130px;
+  height: 35px;
+  background-color: #313944;
+  color: #55585b;
+  border-radius:4px;
+  -moz-border-radius:4px;
+  text-decoration: none;
+  border: none;
+}
+#index_case_table {
+  width: 100%;
+}
+#index_case_table tr:nth-child(2n+1) {
+  background: #f9f9f9;
+}
+#index_case_table thead td {
+  background-color: #ffffff;
+}
+#index_case_table a{
+  color: black;
+}
+#index_case_table a:hover{
+  background-color: black;
+  color: #ffffff;
+}
+#index_case_table td {
+  border-bottom: 1px #e6e6e6 solid;
+  height: 30px;
+}
+#show_case_table {
+  width: 250px;
+}
+#show_case_table tr{
+  height: 30px;
+}
+#links a{
+  color: black;
+}
+#links a:hover{
+  color: #ffffff;
+  background-color: #000000;
+}
+#links {
+  float: right;
+  width: 70%;
+}
+#vertical_menu {
+  padding-left: 20px;
+}
+.simple_form label {
+  float: left;
+  width: 150px;
+  text-align: right;
+  margin: 2px 10px;
+}
+
+.simple_form div.input {
+  margin-bottom: 10px;
+}
+.input input {
+  width: 400px;
+}
+#case_description {
+  width: 400px;
 }

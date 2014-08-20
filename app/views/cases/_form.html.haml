@@ -1,0 +1,26 @@
+-if @case.errors.any?
+  -@case.errors.full_messages.each do |error|
+    \- #{ error.to_s}
+    %br
+=simple_form_for @case, html: { class: 'form-horizontal', multipart: true } do |f|
+  %fieldset
+    %legend
+      =controller.action_name.capitalize
+      case:
+    .control-group
+      =f.input :name, label: 'Case name'
+      =f.input :number
+      =f.input :doc_number, label: 'Docket no.'
+      =f.input :judge
+      =f.input :court
+      =f.input :plaintiff
+      =f.input :defendant
+      =f.input :corporation
+      =f.input :status
+      =f.input :creation_date
+      =f.input :date_closed
+      =f.input :main_type, label: 'Type'
+      =f.input :sub_type, label: 'Sub-type'
+      =f.input :description
+      %br
+      =f.button :submit, class: 'btn btn-primary'
